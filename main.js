@@ -18,7 +18,7 @@ function take_snapshot()
     });
 }
 
-console.log('ml5 version', ml5.version);
+console.log('ml5 Version', ml5.version);
 
 classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/3t7Er-7O-/model.json", modelLoaded);
 
@@ -62,30 +62,30 @@ predication_1=results[0].label;
 predication_2=results[1].label;
 
 speak()
-if (results[0].label=="Happy")
-{
-    document.getElementById("update_emoji").innerHTML="&#128522";
-}
-if(results[0].label=="Sad")
-{
-    document.getElementById("update_emoji").innerHTML="&#128532";
-}
-if(results[0].label=="Angry")
-{
-    document.getElementById("update_emoji").innerHTML="&#128548";
-}
-
 if (results[1].label=="Happy")
 {
-    document.getElementById("update_emoji").innerHTML="&#128522";
+    document.getElementById("update_emoji").innerHTML="&#128522;";
 }
 if(results[1].label=="Sad")
 {
-    document.getElementById("update_emoji").innerHTML="&#128532";
+    document.getElementById("update_emoji").innerHTML="&#128546;";
 }
 if(results[1].label=="Angry")
 {
-    document.getElementById("update_emoji").innerHTML="&#128548";
+    document.getElementById("update_emoji").innerHTML="&#128548;";
+}
+
+if (results[0].label=="Happy")
+{
+    document.getElementById("update_emoji").innerHTML="&#128522;";
+}
+if(results[0].label=="Sad")
+{
+    document.getElementById("update_emoji").innerHTML="&#128546;";
+}
+if(results[0].label=="Angry")
+{
+    document.getElementById("update_emoji").innerHTML="&#128548;";
 }
 }
 }
